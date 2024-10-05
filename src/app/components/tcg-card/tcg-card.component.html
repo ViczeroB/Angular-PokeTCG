@@ -1,0 +1,5 @@
+<div class="card poke-card">
+    <img [src]="pokeCard?.images?.small">
+    <h5 class="text-center"> {{pokeCard?.name}} </h5>
+    <p class="text-center"> {{pokeCard?.cardmarket?.prices?.averageSellPrice | currency}} </p>
+</div>

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+        @for (type of types; track type.types) {
+        <div class="col-sm3 col-md col-lg-2 col-xl-2 mt-3">
+            <button (click)="byType(type)" type="" class="btn btn-danger"> {{type}} </button>
+        </div>
+        } @empty {
+            <h1 class="text-center text-light"> Cargando... </h1>
+        }
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        @for (card of cards; track card.id) {
+        <div class="col-sm3 col-md col-lg-2 col-xl-2 mt-3">
+            <app-tcg-card [pokeCard]="card"></app-tcg-card>
+        </div>
+        } @empty {
+            <h1 class="text-center text-light"> Cargando... </h1>
+        }
+    </div>
+</div>
